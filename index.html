@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="天竺鼠冒險樂園隱私權政策：說明資料收集、使用、保存、第三方服務與刪除方式。">
+    <title>隱私權政策｜天竺鼠冒險樂園</title>
+    <style>
+        :root {
+            --page: #f5f2e8;
+            --paper: #fffdf7;
+            --ink: #332b27;
+            --muted: #6f625a;
+            --line: #d9d2c3;
+            --green: #466b52;
+            --green-soft: #e6efe5;
+            --orange: #d66d25;
+            --orange-soft: #f9e8d8;
+            --blue: #315f8c;
+            --shadow: 0 12px 32px rgba(62, 51, 40, 0.09);
+            --safe-top: env(safe-area-inset-top, 0px);
+            --safe-right: env(safe-area-inset-right, 0px);
+            --safe-bottom: env(safe-area-inset-bottom, 0px);
+            --safe-left: env(safe-area-inset-left, 0px);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--page);
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--page);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.75;
+            letter-spacing: 0;
+            overflow-wrap: anywhere;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        a {
+            color: var(--blue);
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: #23486d;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(214, 109, 37, 0.45);
+            outline-offset: 3px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: calc(var(--safe-top) + 8px);
+            left: calc(var(--safe-left) + 8px);
+            z-index: 20;
+            padding: 8px 12px;
+            color: #fff;
+            background: var(--green);
+            border-radius: 6px;
+            transform: translateY(-180%);
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .site-header {
+            border-bottom: 1px solid var(--line);
+            background: #edf3e9;
+            padding: calc(var(--safe-top) + 28px) max(22px, var(--safe-right)) 28px max(22px, var(--safe-left));
+        }
+
+        .header-inner {
+            width: min(1040px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 112px minmax(0, 1fr);
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand-image {
+            display: block;
+            width: 112px;
+            height: 82px;
+            object-fit: contain;
+        }
+
+        .eyebrow {
+            margin: 0 0 3px;
+            color: var(--green);
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            line-height: 1.25;
+            color: #263a2c;
+        }
+
+        .header-summary {
+            margin: 9px 0 0;
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .date-row {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            color: #5a514a;
+            font-size: 13px;
+        }
+
+        .layout {
+            width: min(1040px, calc(100% - 36px - var(--safe-left) - var(--safe-right)));
+            margin: 30px auto 0;
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contents {
+            position: sticky;
+            top: 18px;
+            padding: 16px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 253, 247, 0.82);
+        }
+
+        .contents strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--green);
+            font-size: 14px;
+        }
+
+        .contents ol {
+            margin: 0;
+            padding-left: 21px;
+        }
+
+        .contents li {
+            margin: 3px 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .contents a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contents a:hover {
+            color: var(--orange);
+            text-decoration: underline;
+        }
+
+        main {
+            min-width: 0;
+            padding: 26px 30px 34px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--paper);
+            box-shadow: var(--shadow);
+        }
+
+        .notice {
+            margin: 0 0 24px;
+            padding: 15px 16px;
+            border-left: 4px solid var(--orange);
+            background: var(--orange-soft);
+            color: #51433a;
+        }
+
+        .notice strong {
+            color: #7c3f17;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            margin: 0 0 26px;
+        }
+
+        .summary-item {
+            padding: 13px;
+            border: 1px solid #cddbcf;
+            border-radius: 8px;
+            background: var(--green-soft);
+        }
+
+        .summary-item b {
+            display: block;
+            color: #31503a;
+            font-size: 14px;
+        }
+
+        .summary-item span {
+            display: block;
+            margin-top: 3px;
+            color: #5f6e63;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        section {
+            scroll-margin-top: 18px;
+            padding: 2px 0 22px;
+            border-top: 1px solid var(--line);
+        }
+
+        section:first-of-type {
+            border-top: 0;
+        }
+
+        h2 {
+            margin: 22px 0 8px;
+            color: #334f3b;
+            font-size: 21px;
+            line-height: 1.35;
+        }
+
+        h3 {
+            margin: 18px 0 5px;
+            color: #68462f;
+            font-size: 16px;
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        ul {
+            margin: 8px 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin: 5px 0;
+            font-size: 15px;
+        }
+
+        .table-wrap {
+            margin: 14px 0;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow-x: auto;
+            background: #fff;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            min-width: 640px;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e6e0d4;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            color: #314837;
+            background: #edf3e9;
+            font-weight: 800;
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .contact-box {
+            margin-top: 14px;
+            padding: 16px;
+            border: 1px solid #e4b98f;
+            border-radius: 8px;
+            background: #fff7ed;
+        }
+
+        .contact-box p {
+            margin: 3px 0;
+        }
+
+        .site-footer {
+            width: min(1040px, calc(100% - 36px - var(--safe-left) - var(--safe-right)));
+            margin: 22px auto 0;
+            padding: 20px 0 calc(24px + var(--safe-bottom));
+            color: var(--muted);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .back-top {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 7px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            color: var(--green);
+            background: var(--paper);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        @media (max-width: 780px) {
+            .site-header {
+                padding-top: calc(var(--safe-top) + 20px);
+                padding-bottom: 21px;
+            }
+
+            .header-inner {
+                grid-template-columns: 84px minmax(0, 1fr);
+                gap: 16px;
+            }
+
+            .brand-image {
+                width: 84px;
+                height: 66px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            .layout {
+                width: min(100% - 24px - var(--safe-left) - var(--safe-right), 720px);
+                margin-top: 18px;
+                display: block;
+            }
+
+            .contents {
+                position: static;
+                margin-bottom: 12px;
+                padding: 11px 13px;
+            }
+
+            .contents ol {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 2px 12px;
+            }
+
+            main {
+                padding: 21px 20px 28px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .site-footer {
+                width: min(100% - 24px - var(--safe-left) - var(--safe-right), 720px);
+            }
+        }
+
+        @media (max-width: 440px) {
+            .header-inner {
+                grid-template-columns: 66px minmax(0, 1fr);
+                gap: 12px;
+            }
+
+            .brand-image {
+                width: 66px;
+                height: 54px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .header-summary {
+                font-size: 14px;
+            }
+
+            .date-row {
+                display: block;
+            }
+
+            .date-row span {
+                display: block;
+            }
+
+            .contents ol {
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                padding: 18px 16px 24px;
+            }
+
+            h2 {
+                font-size: 19px;
+            }
+
+            p,
+            li {
+                font-size: 14px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .site-header {
+                padding: 20px 0;
+            }
+
+            .layout {
+                width: 100%;
+                display: block;
+                margin-top: 0;
+            }
+
+            .contents,
+            .back-top {
+                display: none;
+            }
+
+            main {
+                padding: 0;
+                border: 0;
+                box-shadow: none;
+            }
+
+            a {
+                color: inherit;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+    <!-- 正式 App 名稱若有變更，請搜尋「天竺鼠冒險樂園」統一替換。 -->
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <img class="brand-image" src="pupu/pupu01.png" alt="天竺鼠湯圓" width="112" height="82">
+            <div>
+                <p class="eyebrow">天竺鼠冒險樂園</p>
+                <h1>隱私權政策</h1>
+                <p class="header-summary">本政策說明本遊戲如何處理玩家資料、裝置資訊、廣告、分析及應用程式內購買資料。</p>
+                <div class="date-row" aria-label="政策日期">
+                    <span>生效日期：2026 年 7 月 13 日</span>
+                    <span>最後更新：2026 年 7 月 13 日</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <nav class="contents" aria-label="隱私權政策目錄">
+            <strong>政策目錄</strong>
+            <ol>
+                <li><a href="#scope">適用範圍</a></li>
+                <li><a href="#data">處理的資料</a></li>
+                <li><a href="#purpose">使用目的</a></li>
+                <li><a href="#third-parties">第三方服務</a></li>
+                <li><a href="#ads">廣告與追蹤</a></li>
+                <li><a href="#retention">保存與刪除</a></li>
+                <li><a href="#children">兒童與未成年</a></li>
+                <li><a href="#rights">玩家權利</a></li>
+                <li><a href="#security">資料安全</a></li>
+                <li><a href="#changes">政策更新</a></li>
+                <li><a href="#contact">聯絡方式</a></li>
+            </ol>
+        </nav>
+
+        <main id="main-content">
+            <div class="notice">
+                <strong>重要摘要：</strong>本遊戲目前不要求建立線上會員帳號。冒險者名稱與主要遊戲進度原則上保存在玩家裝置中；網路功能則可能透過 Firebase、Google AdMob、Apple App Store 與 RevenueCat 處理必要的技術、廣告或購買資料。
+            </div>
+
+            <div class="summary-grid" aria-label="隱私摘要">
+                <div class="summary-item">
+                    <b>本機遊戲存檔</b>
+                    <span>玩家名稱、進度與道具主要留在裝置內。</span>
+                </div>
+                <div class="summary-item">
+                    <b>不取得付款卡號</b>
+                    <span>付款由 Apple 等官方商店處理。</span>
+                </div>
+                <div class="summary-item">
+                    <b>不出售個人資料</b>
+                    <span>資料僅依本政策所列目的使用或分享。</span>
+                </div>
+            </div>
+
+            <section id="scope">
+                <h2>1. 適用範圍與資料控制者</h2>
+                <p>本隱私權政策適用於「天竺鼠冒險樂園」（以下稱「本遊戲」）的 iOS 應用程式、遊戲內功能，以及與本遊戲直接相關的支援服務。</p>
+                <p>本遊戲的資料控制者為 App Store 產品頁所顯示之開發者。若您對本政策或資料處理方式有疑問，可透過本頁底部的聯絡信箱與開發者聯繫。</p>
+                <p>本遊戲中的「冒險者檔案」是保存在裝置內的遊戲存檔，不是線上會員帳號。目前本遊戲不要求玩家提供真實姓名、電話、住址或身分證件。</p>
+            </section>
+
+            <section id="data">
+                <h2>2. 我們處理的資料</h2>
+
+                <h3>2.1 玩家自行建立及本機保存的資料</h3>
+                <p>下列資料主要透過 Local Storage 或 Capacitor Preferences 等裝置端儲存機制保存在玩家裝置中：</p>
+                <ul>
+                    <li>玩家輸入的冒險者名稱及裝置內的多個冒險者存檔。</li>
+                    <li>金幣、體力、黑豆、道具、遊戲票券、天竺鼠、好感度、裝扮與擺設位置。</li>
+                    <li>關卡進度、星等、遊玩次數、小遊戲紀錄、任務狀態與新手引導進度。</li>
+                    <li>背景音樂、遊戲音效及其他偏好設定。</li>
+                </ul>
+                <p>本遊戲目前不會將上述完整本機存檔主動同步到開發者自有的玩家進度資料庫。</p>
+
+                <h3>2.2 Firebase 技術與使用資料</h3>
+                <p>本遊戲可能使用 Firebase Analytics 了解基本使用狀況。依 Firebase 的服務機制，可能處理應用程式執行個體識別碼、裝置與作業系統資訊、應用程式版本、語言、互動事件、連線資訊及診斷資料。</p>
+                <p>五個世界的關卡資料均隨 App 版本內建，不會透過 Firebase Remote Config 下載或更新。新增或調整關卡時，將透過 App Store 發布新版 App。</p>
+
+                <h3>2.3 廣告相關資料</h3>
+                <p>本遊戲可能顯示 Google AdMob 獎勵廣告。Google Mobile Ads SDK 依實際設定、所在區域與玩家同意狀態，可能處理 IP 位址、由 IP 推估的一般位置、裝置或廣告識別碼、廣告曝光與互動紀錄、應用程式互動、效能及診斷資料。</p>
+
+                <h3>2.4 購買及權益資料</h3>
+                <p>若玩家購買永久去廣告或其他應用程式內商品，Apple 負責處理付款。本遊戲及 RevenueCat 可能處理商品識別碼、購買狀態、交易收據或權杖、權益狀態、匿名 App User ID，以及驗證交易所需的技術資訊。本遊戲不會取得或保存玩家的完整信用卡號、銀行帳戶或 Apple ID 密碼。</p>
+
+                <h3>2.5 聯絡支援資料</h3>
+                <p>當玩家主動寄信聯絡時，開發者會收到寄件信箱、信件內容及玩家自行附上的資料，用於回覆問題、處理購買或技術支援。請勿在信件中提供與問題無關的敏感個人資料。</p>
+
+                <h3>2.6 本遊戲不主動要求的資料</h3>
+                <p>目前本遊戲不會為核心遊戲功能主動要求存取精確位置、聯絡人、相機、麥克風、健康資料或裝置內的個人照片。若未來新增需要系統權限的功能，本遊戲會在存取前說明用途並依規定取得許可。</p>
+            </section>
+
+            <section id="purpose">
+                <h2>3. 資料使用目的</h2>
+                <p>前述資料可能用於以下目的：</p>
+                <ul>
+                    <li>保存及載入遊戲進度、設定與玩家選擇。</li>
+                    <li>維持遊戲功能、相容性與服務穩定性。</li>
+                    <li>分析基本使用狀況、排查錯誤並改善遊戲體驗。</li>
+                    <li>顯示、衡量及防止濫用獎勵廣告。</li>
+                    <li>完成交易、驗證購買、恢復購買及提供永久去廣告等權益。</li>
+                    <li>回覆玩家詢問、處理客戶支援及依法履行義務。</li>
+                </ul>
+                <p>本遊戲不會將玩家提供的資料出售給資料仲介商，也不會將資料改作與上述目的明顯無關的用途。</p>
+            </section>
+
+            <section id="third-parties">
+                <h2>4. 第三方服務與資料分享</h2>
+                <p>為提供遊戲功能，本遊戲可能將必要資料傳送給下列服務提供者。第三方會依其政策及與開發者之約定處理資料：</p>
+
+                <div class="table-wrap" role="region" aria-label="第三方服務資料表" tabindex="0">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">服務</th>
+                                <th scope="col">用途</th>
+                                <th scope="col">可能處理的資料</th>
+                                <th scope="col">政策</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Google Firebase</td>
+                                <td>使用分析與診斷</td>
+                                <td>應用程式執行個體與裝置技術資料、互動事件、診斷及連線資料</td>
+                                <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase 隱私資訊</a></td>
+                            </tr>
+                            <tr>
+                                <td>Google AdMob</td>
+                                <td>獎勵廣告、廣告衡量與防詐欺</td>
+                                <td>IP、一般位置、識別碼、廣告及應用程式互動、效能與診斷資料</td>
+                                <td><a href="https://policies.google.com/privacy?hl=zh-TW" target="_blank" rel="noopener noreferrer">Google 隱私權政策</a></td>
+                            </tr>
+                            <tr>
+                                <td>Apple App Store / StoreKit</td>
+                                <td>付款、交易管理與恢復購買</td>
+                                <td>Apple 帳戶交易紀錄、商品及收據資料</td>
+                                <td><a href="https://www.apple.com/legal/privacy/zh-tw/" target="_blank" rel="noopener noreferrer">Apple 隱私權政策</a></td>
+                            </tr>
+                            <tr>
+                                <td>RevenueCat</td>
+                                <td>驗證購買與管理商品權益</td>
+                                <td>匿名 App User ID、交易收據、購買歷史、權益及技術資料</td>
+                                <td><a href="https://www.revenuecat.com/privacy-policy/" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p>除上述服務、依法配合主管機關或司法機關要求、保護玩家與服務安全、處理詐欺及維護合法權益所必要的情形外，開發者不會任意向無關第三方揭露玩家資料。</p>
+                <p>本遊戲部分既有圖片或美術概念曾由生成式 AI 工具協助製作；單純顯示這些既有素材不會將玩家資料傳送給 OpenAI、Google Gemini 或其他生成式 AI 服務。</p>
+            </section>
+
+            <section id="ads">
+                <h2>5. 廣告、同意與跨 App 追蹤</h2>
+                <p>本遊戲的廣告以玩家主動選擇觀看的獎勵廣告為主。拒絕追蹤許可不會阻止玩家使用本遊戲的核心內容，但可能影響廣告個人化、衡量方式或可供應的廣告類型。</p>
+                <ul>
+                    <li>若廣告功能需要依 Apple 定義進行跨 App 或網站追蹤，本遊戲會先透過 App Tracking Transparency（ATT）請求玩家許可；未取得許可時，不會取得 IDFA 用於該類追蹤。</li>
+                    <li>對歐洲經濟區、英國、瑞士或其他依法需要同意的地區，本遊戲會依實際廣告設定提供適用的同意或隱私選項。</li>
+                    <li>玩家可在 iOS「設定」中的隱私權與追蹤選項管理已授予的追蹤權限。</li>
+                </ul>
+            </section>
+
+            <section id="retention">
+                <h2>6. 資料保存與刪除方式</h2>
+                <ul>
+                    <li><strong>本機遊戲資料：</strong>保存於裝置中，直到玩家在遊戲設定使用「清除紀錄」、透過系統清除 App 資料，或刪除本遊戲。刪除後，本機進度通常無法恢復。</li>
+                    <li><strong>客服信件：</strong>原則上保存至問題處理完成及必要的後續追蹤期間，最長不超過 24 個月；若法令、交易爭議或安全事件要求較長保存期間，依必要期間保存。</li>
+                    <li><strong>分析、廣告與購買資料：</strong>由 Firebase、Google AdMob、Apple 與 RevenueCat 依各自政策、帳戶設定、交易驗證、防詐欺及法律義務保存。刪除 App 不一定會刪除商店交易或第三方依法保存的紀錄。</li>
+                </ul>
+                <p>若玩家希望查詢或刪除開發者可控制的支援資料，或請求協助處理與匿名購買識別碼相關的資料，可寄信至本政策所列聯絡信箱。為避免誤刪，開發者可能要求提供足以確認該請求與交易或裝置相關的非敏感資訊。</p>
+            </section>
+
+            <section id="children">
+                <h2>7. 兒童與未成年使用者</h2>
+                <p>本遊戲不要求兒童建立線上會員帳號，也不會故意要求未滿 13 歲或當地法律所定最低年齡的兒童提供可直接識別個人身分的資料。未成年玩家應在父母或法定監護人同意及陪同下使用本遊戲，並由成年人確認任何應用程式內購買。</p>
+                <p>若父母或監護人認為兒童在未經適當同意的情況下向開發者提供了個人資料，請來信聯絡；經合理確認後，開發者會依適用法律採取刪除或限制處理等措施。</p>
+            </section>
+
+            <section id="rights">
+                <h2>8. 玩家選擇與資料權利</h2>
+                <p>依玩家所在司法管轄區，玩家可能享有查詢、存取、更正、刪除、限制處理、反對處理或撤回同意等權利。玩家可以：</p>
+                <ul>
+                    <li>使用遊戲設定中的「清除紀錄」刪除目前冒險者的本機存檔。</li>
+                    <li>刪除 App 或透過裝置系統設定清除本機資料。</li>
+                    <li>在 iOS 系統設定中管理追蹤權限。</li>
+                    <li>透過廣告同意畫面管理適用的廣告選擇。</li>
+                    <li>透過本頁信箱提出隱私請求；開發者原則上會在收到完整請求後 30 日內回覆，法律另有規定者從其規定。</li>
+                </ul>
+                <p>由 Apple 直接控制的付款與 Apple ID 資料，請透過 Apple 提供的帳戶及隱私工具管理。</p>
+            </section>
+
+            <section id="security">
+                <h2>9. 資料安全與跨境處理</h2>
+                <p>開發者會採取與資料性質相稱的合理技術及管理措施，降低未經授權存取、遺失、誤用或竄改的風險。但任何裝置儲存與網路傳輸方式皆無法保證絕對安全，玩家亦應妥善保護自己的裝置與 Apple ID。</p>
+                <p>Firebase、Google AdMob、Apple 或 RevenueCat 可能在玩家所在國家或地區以外的伺服器處理資料。相關跨境處理由各服務提供者依其政策及適用法律執行。</p>
+            </section>
+
+            <section id="changes">
+                <h2>10. 本政策的更新</h2>
+                <p>本政策可能因遊戲功能、第三方 SDK、法規或上架平台要求變更而更新。更新後會在本頁標示新的「最後更新」日期；若變更會重大影響玩家權利，開發者會在合理可行的範圍內透過遊戲內訊息或其他適當方式通知。</p>
+                <p>本政策內容應與 App Store Connect 的 App Privacy 回答及實際發布版本保持一致。若功能尚未啟用，相關服務只會在正式整合並發布後開始處理資料。</p>
+            </section>
+
+            <section id="contact">
+                <h2>11. 聯絡方式</h2>
+                <p>對本政策、資料處理、刪除請求或兒童隱私有任何疑問，請聯絡本遊戲開發者：</p>
+                <div class="contact-box">
+                    <p><strong>聯絡信箱</strong></p>
+                    <p><a href="mailto:morumotto9966@gmail.com">morumotto9966@gmail.com</a></p>
+                    <p>信件主旨建議填寫：「天竺鼠冒險樂園－隱私權詢問」。</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div>© 2026 天竺鼠冒險樂園。保留所有權利。</div>
+        <a class="back-top" href="#top">回到頁首</a>
+    </footer>
+</body>
+</html>
