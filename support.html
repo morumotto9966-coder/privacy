@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="《天竺鼠冒險樂園》官方支援頁面：聯絡方式、常見問題與隱私權政策。" />
+  <title>天竺鼠冒險樂園｜支援中心</title>
+  <style>
+    :root {
+      --bg: #fffaf2;
+      --card: rgba(255,255,255,.92);
+      --text: #4b3b2f;
+      --muted: #7a6a5c;
+      --accent: #e8892f;
+      --accent-dark: #b85f18;
+      --line: #efdcc7;
+      --soft: #fff1df;
+      --shadow: 0 12px 34px rgba(110, 72, 35, .10);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--bg);
+      color-scheme: light;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC",
+                   "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 214, 153, .28), transparent 34rem),
+        radial-gradient(circle at 90% 12%, rgba(255, 236, 176, .34), transparent 30rem),
+        var(--bg);
+      line-height: 1.75;
+    }
+
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding:
+        max(32px, env(safe-area-inset-top))
+        0
+        max(36px, env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      text-align: center;
+      padding: 38px 22px 28px;
+    }
+
+    .icon {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 18px;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      font-size: 50px;
+      background: linear-gradient(145deg, #fff8e8, #ffe6bd);
+      border: 1px solid #f1d2a7;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(30px, 5vw, 46px);
+      letter-spacing: .04em;
+      color: #3f2d20;
+    }
+
+    .subtitle {
+      margin: 12px auto 0;
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 23px;
+      color: #4a3221;
+    }
+
+    h3 {
+      margin: 22px 0 8px;
+      font-size: 18px;
+      color: #5a3d26;
+    }
+
+    p { margin: 8px 0; }
+
+    .contact-box {
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--soft);
+      border: 1px solid #f3d3ad;
+    }
+
+    .email-link,
+    .button-link {
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .email-link:hover,
+    .button-link:hover {
+      text-decoration: underline;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid #efc58f;
+      text-decoration: none;
+    }
+
+    .faq {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+
+    .faq:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: #fff0dc;
+      color: #9a5319;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    footer {
+      text-align: center;
+      color: #8b7a6b;
+      font-size: 14px;
+      padding: 14px 8px 0;
+    }
+
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 20px, 920px); }
+      .hero { padding: 28px 12px 22px; }
+      .card { padding: 20px; border-radius: 18px; }
+      .icon { width: 82px; height: 82px; font-size: 44px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="icon" aria-hidden="true">🐹</div>
+      <h1>天竺鼠冒險樂園</h1>
+      <p class="subtitle">
+        歡迎來到官方支援中心。若你在遊戲中遇到問題、想提供建議，
+        或需要協助，請透過下方方式與我們聯絡。
+      </p>
+    </section>
+
+    <section class="card">
+      <span class="label">聯絡我們</span>
+      <h2>玩家支援</h2>
+      <p>
+        請在來信中簡單說明你遇到的問題，若方便，也可以附上裝置型號、
+        iOS 版本與問題畫面，讓我們更容易了解狀況。
+      </p>
+
+      <div class="contact-box">
+        <strong>支援信箱</strong><br />
+        <a class="email-link" href="mailto:morumotto9966@gmail.com?subject=%E5%A4%A9%E7%AB%BA%E9%BC%A0%E5%86%92%E9%9A%AA%E6%A8%82%E5%9C%92%E6%94%AF%E6%8F%B4">
+          morumotto9966@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <span class="label">常見問題</span>
+      <h2>FAQ</h2>
+
+      <div class="faq">
+        <h3>遊戲無法正常開啟或畫面異常怎麼辦？</h3>
+        <p>
+          請先完全關閉 App 後重新開啟。若問題仍然存在，請重新啟動裝置，
+          並確認已安裝最新版本的 App。
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>遊戲進度會儲存在哪裡？</h3>
+        <p>
+          目前遊戲資料主要儲存在裝置本機。移除 App、清除資料或更換裝置前，
+          請留意部分本機資料可能無法保留。
+        </p>
+      </div>
+
+      <div class="faq">
+        <h3>我可以提供新功能或小遊戲建議嗎？</h3>
+        <p>
+          可以。歡迎透過支援信箱告訴我們你希望加入的玩法、功能或改善建議。
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <span class="label">相關資訊</span>
+      <h2>隱私權政策</h2>
+      <p>你可以在下方查看《天竺鼠冒險樂園》的隱私權政策。</p>
+      <a
+        class="button-link"
+        href="https://morumotto9966-coder.github.io/privacy/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        查看隱私權政策
+      </a>
+    </section>
+
+    <footer>
+      © 2026 WU GUEI-RONG. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
