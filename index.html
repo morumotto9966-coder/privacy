@@ -462,14 +462,14 @@
 
     <header class="site-header">
         <div class="header-inner">
-            <img class="brand-image" src="pupu01.png" alt="天竺鼠湯圓" width="112" height="82">
+            <img class="brand-image" src="pupu/pupu01.png" alt="天竺鼠湯圓" width="112" height="82">
             <div>
                 <p class="eyebrow">天竺鼠冒險樂園</p>
                 <h1>隱私權政策</h1>
-                <p class="header-summary">本政策說明本遊戲如何處理玩家資料、裝置資訊、廣告、分析及應用程式內購買資料。</p>
+                <p class="header-summary">本政策說明本遊戲如何處理玩家資料、裝置資訊、廣告及應用程式內購買資料。</p>
                 <div class="date-row" aria-label="政策日期">
                     <span>生效日期：2026 年 7 月 13 日</span>
-                    <span>最後更新：2026 年 7 月 13 日</span>
+                    <span>最後更新：2026 年 7 月 14 日</span>
                 </div>
             </div>
         </div>
@@ -495,7 +495,7 @@
 
         <main id="main-content">
             <div class="notice">
-                <strong>重要摘要：</strong>本遊戲目前不要求建立線上會員帳號。冒險者名稱與主要遊戲進度原則上保存在玩家裝置中；網路功能則可能透過 Firebase、Google AdMob、Apple App Store 與 RevenueCat 處理必要的技術、廣告或購買資料。
+                <strong>重要摘要：</strong>本遊戲目前不要求建立線上會員帳號。冒險者名稱與主要遊戲進度原則上保存在玩家裝置中；網路功能則可能透過 Google AdMob、Apple App Store 與 RevenueCat 處理必要的廣告或購買資料。
             </div>
 
             <div class="summary-grid" aria-label="隱私摘要">
@@ -533,15 +533,14 @@
                 </ul>
                 <p>本遊戲目前不會將上述完整本機存檔主動同步到開發者自有的玩家進度資料庫。</p>
 
-                <h3>2.2 Firebase 技術與使用資料</h3>
-                <p>本遊戲可能使用 Firebase Analytics 了解基本使用狀況。依 Firebase 的服務機制，可能處理應用程式執行個體識別碼、裝置與作業系統資訊、應用程式版本、語言、互動事件、連線資訊及診斷資料。</p>
-                <p>五個世界的關卡資料均隨 App 版本內建，不會透過 Firebase Remote Config 下載或更新。新增或調整關卡時，將透過 App Store 發布新版 App。</p>
+                <h3>2.2 內建關卡與本機資料</h3>
+                <p>五個世界的關卡資料均隨 App 版本內建，不會透過雲端服務下載、同步或更新。新增或調整關卡時，將透過 App Store 發布新版 App。本遊戲亦不會將完整本機存檔上傳至開發者自有的玩家進度資料庫。</p>
 
                 <h3>2.3 廣告相關資料</h3>
                 <p>本遊戲可能顯示 Google AdMob 獎勵廣告。Google Mobile Ads SDK 依實際設定、所在區域與玩家同意狀態，可能處理 IP 位址、由 IP 推估的一般位置、裝置或廣告識別碼、廣告曝光與互動紀錄、應用程式互動、效能及診斷資料。</p>
 
                 <h3>2.4 購買及權益資料</h3>
-                <p>若玩家購買永久去廣告或其他應用程式內商品，Apple 負責處理付款。本遊戲及 RevenueCat 可能處理商品識別碼、購買狀態、交易收據或權杖、權益狀態、匿名 App User ID，以及驗證交易所需的技術資訊。本遊戲不會取得或保存玩家的完整信用卡號、銀行帳戶或 Apple ID 密碼。</p>
+                <p>若玩家購買目前唯一的真實貨幣商品「永久免看廣告（永久去廣告）」，Apple 負責處理付款。本遊戲及 RevenueCat 可能處理商品識別碼、購買狀態、交易收據或權杖、權益狀態、匿名 App User ID，以及驗證交易所需的技術資訊。本遊戲不會取得或保存玩家的完整信用卡號、銀行帳戶或 Apple ID 密碼。</p>
 
                 <h3>2.5 聯絡支援資料</h3>
                 <p>當玩家主動寄信聯絡時，開發者會收到寄件信箱、信件內容及玩家自行附上的資料，用於回覆問題、處理購買或技術支援。請勿在信件中提供與問題無關的敏感個人資料。</p>
@@ -556,7 +555,6 @@
                 <ul>
                     <li>保存及載入遊戲進度、設定與玩家選擇。</li>
                     <li>維持遊戲功能、相容性與服務穩定性。</li>
-                    <li>分析基本使用狀況、排查錯誤並改善遊戲體驗。</li>
                     <li>顯示、衡量及防止濫用獎勵廣告。</li>
                     <li>完成交易、驗證購買、恢復購買及提供永久去廣告等權益。</li>
                     <li>回覆玩家詢問、處理客戶支援及依法履行義務。</li>
@@ -579,12 +577,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Google Firebase</td>
-                                <td>使用分析與診斷</td>
-                                <td>應用程式執行個體與裝置技術資料、互動事件、診斷及連線資料</td>
-                                <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase 隱私資訊</a></td>
-                            </tr>
                             <tr>
                                 <td>Google AdMob</td>
                                 <td>獎勵廣告、廣告衡量與防詐欺</td>
@@ -626,7 +618,7 @@
                 <ul>
                     <li><strong>本機遊戲資料：</strong>保存於裝置中，直到玩家在遊戲設定使用「清除紀錄」、透過系統清除 App 資料，或刪除本遊戲。刪除後，本機進度通常無法恢復。</li>
                     <li><strong>客服信件：</strong>原則上保存至問題處理完成及必要的後續追蹤期間，最長不超過 24 個月；若法令、交易爭議或安全事件要求較長保存期間，依必要期間保存。</li>
-                    <li><strong>分析、廣告與購買資料：</strong>由 Firebase、Google AdMob、Apple 與 RevenueCat 依各自政策、帳戶設定、交易驗證、防詐欺及法律義務保存。刪除 App 不一定會刪除商店交易或第三方依法保存的紀錄。</li>
+                    <li><strong>廣告與購買資料：</strong>由 Google AdMob、Apple 與 RevenueCat 依各自政策、帳戶設定、交易驗證、防詐欺及法律義務保存。刪除 App 不一定會刪除商店交易或第三方依法保存的紀錄。</li>
                 </ul>
                 <p>若玩家希望查詢或刪除開發者可控制的支援資料，或請求協助處理與匿名購買識別碼相關的資料，可寄信至本政策所列聯絡信箱。為避免誤刪，開發者可能要求提供足以確認該請求與交易或裝置相關的非敏感資訊。</p>
             </section>
@@ -653,7 +645,7 @@
             <section id="security">
                 <h2>9. 資料安全與跨境處理</h2>
                 <p>開發者會採取與資料性質相稱的合理技術及管理措施，降低未經授權存取、遺失、誤用或竄改的風險。但任何裝置儲存與網路傳輸方式皆無法保證絕對安全，玩家亦應妥善保護自己的裝置與 Apple ID。</p>
-                <p>Firebase、Google AdMob、Apple 或 RevenueCat 可能在玩家所在國家或地區以外的伺服器處理資料。相關跨境處理由各服務提供者依其政策及適用法律執行。</p>
+                <p>Google AdMob、Apple 或 RevenueCat 可能在玩家所在國家或地區以外的伺服器處理資料。相關跨境處理由各服務提供者依其政策及適用法律執行。</p>
             </section>
 
             <section id="changes">
@@ -667,7 +659,7 @@
                 <p>對本政策、資料處理、刪除請求或兒童隱私有任何疑問，請聯絡本遊戲開發者：</p>
                 <div class="contact-box">
                     <p><strong>聯絡信箱</strong></p>
-                    <p><a href="mailto:morumotto9966@gmail.com">morumotto9966@gmail.com</a></p>
+                    <p><a href="mailto:murasakiasato36">morumotto9966@gmail.com</a></p>
                     <p>信件主旨建議填寫：「天竺鼠冒險樂園－隱私權詢問」。</p>
                 </div>
             </section>
