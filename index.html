@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
     <meta name="color-scheme" content="light">
     <meta name="description" content="天竺鼠冒險樂園隱私權政策：說明資料收集、使用、保存、第三方服務與刪除方式。">
     <title>隱私權政策｜天竺鼠冒險樂園</title>
@@ -27,15 +27,26 @@
 
         * {
             box-sizing: border-box;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
         html {
             scroll-behavior: smooth;
             background: var(--page);
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
 
         body {
             margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
             color: var(--ink);
             background: var(--page);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
@@ -43,6 +54,19 @@
             letter-spacing: 0;
             overflow-wrap: anywhere;
             -webkit-text-size-adjust: 100%;
+            touch-action: none;
+        }
+
+        .privacy-scroll-shell {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            overscroll-behavior: contain;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-y;
         }
 
         a {
@@ -456,7 +480,8 @@
         }
     </style>
 </head>
-<body id="top">
+<body>
+<div class="privacy-scroll-shell" id="top">
     <!-- 正式 App 名稱若有變更，請搜尋「天竺鼠冒險樂園」統一替換。 -->
     <a class="skip-link" href="#main-content">跳至主要內容</a>
 
@@ -469,7 +494,7 @@
                 <p class="header-summary">本政策說明本遊戲如何處理玩家資料、裝置資訊、廣告及應用程式內購買資料。</p>
                 <div class="date-row" aria-label="政策日期">
                     <span>生效日期：2026 年 7 月 13 日</span>
-                    <span>最後更新：2026 年 7 月 14 日</span>
+                    <span>最後更新：2026 年 7 月 15 日</span>
                 </div>
             </div>
         </div>
@@ -537,7 +562,7 @@
                 <p>五個世界的關卡資料均隨 App 版本內建，不會透過雲端服務下載、同步或更新。新增或調整關卡時，將透過 App Store 發布新版 App。本遊戲亦不會將完整本機存檔上傳至開發者自有的玩家進度資料庫。</p>
 
                 <h3>2.3 廣告相關資料</h3>
-                <p>本遊戲可能顯示 Google AdMob 獎勵廣告。Google Mobile Ads SDK 依實際設定、所在區域與玩家同意狀態，可能處理 IP 位址、由 IP 推估的一般位置、裝置或廣告識別碼、廣告曝光與互動紀錄、應用程式互動、效能及診斷資料。</p>
+                <p>本遊戲使用 Google AdMob 顯示由玩家主動選擇觀看的獎勵廣告，包括關卡結算金幣加倍、小遊戲增加一次遊玩機會，以及幸運轉盤增加一次抽獎機會。Google Mobile Ads SDK 依實際設定、所在區域與玩家同意狀態，可能處理 IP 位址、由 IP 推估的一般位置、裝置或廣告識別碼、廣告曝光與互動紀錄、應用程式互動、效能及診斷資料。</p>
 
                 <h3>2.4 購買及權益資料</h3>
                 <p>若玩家購買目前唯一的真實貨幣商品「永久免看廣告（永久去廣告）」，Apple 負責處理付款。本遊戲及 RevenueCat 可能處理商品識別碼、購買狀態、交易收據或權杖、權益狀態、匿名 App User ID，以及驗證交易所需的技術資訊。本遊戲不會取得或保存玩家的完整信用卡號、銀行帳戶或 Apple ID 密碼。</p>
@@ -605,11 +630,12 @@
 
             <section id="ads">
                 <h2>5. 廣告、同意與跨 App 追蹤</h2>
-                <p>本遊戲的廣告以玩家主動選擇觀看的獎勵廣告為主。拒絕追蹤許可不會阻止玩家使用本遊戲的核心內容，但可能影響廣告個人化、衡量方式或可供應的廣告類型。</p>
+                <p>本遊戲的廣告以玩家主動選擇觀看的獎勵廣告為主。是否同意個人化廣告不會阻止玩家使用本遊戲的核心內容，但可能影響廣告個人化、衡量方式或可供應的廣告類型。</p>
                 <ul>
-                    <li>若廣告功能需要依 Apple 定義進行跨 App 或網站追蹤，本遊戲會先透過 App Tracking Transparency（ATT）請求玩家許可；未取得許可時，不會取得 IDFA 用於該類追蹤。</li>
-                    <li>對歐洲經濟區、英國、瑞士或其他依法需要同意的地區，本遊戲會依實際廣告設定提供適用的同意或隱私選項。</li>
-                    <li>玩家可在 iOS「設定」中的隱私權與追蹤選項管理已授予的追蹤權限。</li>
+                    <li>本遊戲使用 Google User Messaging Platform（UMP）管理適用地區的廣告隱私同意。</li>
+                    <li>App 每次啟動時會更新 UMP 同意資訊；若 Google 回報需要同意表單，會先顯示表單，並只在 UMP 回報可請求廣告後載入或請求廣告。</li>
+                    <li>玩家可透過遊戲設定中的「廣告隱私選項」重新管理目前可用的廣告選擇。</li>
+                    <li>若未來啟用依 Apple 定義需要 App Tracking Transparency（ATT）許可的跨 App 或網站追蹤，本遊戲會在進行該類追蹤前先請求玩家許可。</li>
                 </ul>
             </section>
 
@@ -635,8 +661,8 @@
                 <ul>
                     <li>使用遊戲設定中的「清除紀錄」刪除目前冒險者的本機存檔。</li>
                     <li>刪除 App 或透過裝置系統設定清除本機資料。</li>
-                    <li>在 iOS 系統設定中管理追蹤權限。</li>
-                    <li>透過廣告同意畫面管理適用的廣告選擇。</li>
+                    <li>若 App 曾請求 iOS 追蹤權限，可在 iOS 系統設定中管理該權限。</li>
+                    <li>透過遊戲設定中的「廣告隱私選項」管理適用的廣告選擇。</li>
                     <li>透過本頁信箱提出隱私請求；開發者原則上會在收到完整請求後 30 日內回覆，法律另有規定者從其規定。</li>
                 </ul>
                 <p>由 Apple 直接控制的付款與 Apple ID 資料，請透過 Apple 提供的帳戶及隱私工具管理。</p>
@@ -659,7 +685,7 @@
                 <p>對本政策、資料處理、刪除請求或兒童隱私有任何疑問，請聯絡本遊戲開發者：</p>
                 <div class="contact-box">
                     <p><strong>聯絡信箱</strong></p>
-                    <p><a href="mailto:murasakiasato36">morumotto9966@gmail.com</a></p>
+                    <p><a href="mailto:morumotto9966@gmail.com">morumotto9966@gmail.com</a></p>
                     <p>信件主旨建議填寫：「天竺鼠冒險樂園－隱私權詢問」。</p>
                 </div>
             </section>
@@ -670,5 +696,140 @@
         <div>© 2026 天竺鼠冒險樂園。保留所有權利。</div>
         <a class="back-top" href="#top">回到頁首</a>
     </footer>
+</div>
+<script>
+    let isPrivacyPolicyManualScrolling = false;
+
+    function installPrivacyPolicyTouchScroller() {
+        const scroller = document.querySelector('.privacy-scroll-shell');
+        if (!scroller || scroller.dataset.touchScroller === '1') return;
+        scroller.dataset.touchScroller = '1';
+
+        let startX = 0;
+        let startY = 0;
+        let startScrollTop = 0;
+        let lastY = 0;
+        let lastTime = 0;
+        let velocity = 0;
+        let rafId = null;
+        let isTouching = false;
+        let horizontalTableGesture = false;
+
+        function stopMomentum() {
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = null;
+        }
+
+        scroller.addEventListener('touchstart', function(event) {
+            if (!event.touches || event.touches.length !== 1) return;
+            const touch = event.touches[0];
+            isTouching = true;
+            isPrivacyPolicyManualScrolling = false;
+            horizontalTableGesture = false;
+            stopMomentum();
+            startX = touch.clientX;
+            startY = touch.clientY;
+            startScrollTop = scroller.scrollTop;
+            lastY = startY;
+            lastTime = Date.now();
+            velocity = 0;
+        }, { passive: true });
+
+        scroller.addEventListener('touchmove', function(event) {
+            if (!event.touches || event.touches.length !== 1) return;
+            const touch = event.touches[0];
+            const deltaX = touch.clientX - startX;
+            const deltaY = touch.clientY - startY;
+            const table = event.target && event.target.closest ? event.target.closest('.table-wrap') : null;
+
+            if (table && !isPrivacyPolicyManualScrolling && Math.abs(deltaX) > Math.abs(deltaY)) {
+                horizontalTableGesture = true;
+            }
+            if (horizontalTableGesture) return;
+
+            const now = Date.now();
+            const maxScrollTop = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+            const nextScrollTop = startScrollTop - deltaY;
+            scroller.scrollTop = Math.max(0, Math.min(maxScrollTop, nextScrollTop));
+
+            const elapsed = now - lastTime;
+            const frameDeltaY = touch.clientY - lastY;
+            if (Math.abs(deltaY) > 3) isPrivacyPolicyManualScrolling = true;
+            if (elapsed > 0) velocity = velocity * 0.4 + (frameDeltaY / elapsed) * 0.6;
+            lastY = touch.clientY;
+            lastTime = now;
+            event.preventDefault();
+            event.stopPropagation();
+        }, { passive: false });
+
+        scroller.addEventListener('touchend', function() {
+            isTouching = false;
+            if (horizontalTableGesture || Math.abs(velocity) <= 0.15) {
+                setTimeout(function() { isPrivacyPolicyManualScrolling = false; }, 80);
+                return;
+            }
+
+            let lastTickTime = Date.now();
+            const step = function() {
+                if (isTouching) return;
+                const now = Date.now();
+                const elapsed = now - lastTickTime;
+                lastTickTime = now;
+                velocity *= Math.pow(0.96, elapsed / 16.6);
+                if (Math.abs(velocity) < 0.05) {
+                    isPrivacyPolicyManualScrolling = false;
+                    return;
+                }
+                const previousScrollTop = scroller.scrollTop;
+                scroller.scrollTop -= velocity * elapsed;
+                if (scroller.scrollTop === previousScrollTop) {
+                    isPrivacyPolicyManualScrolling = false;
+                    return;
+                }
+                rafId = requestAnimationFrame(step);
+            };
+            rafId = requestAnimationFrame(step);
+        }, { passive: true });
+
+        scroller.addEventListener('touchcancel', function() {
+            isTouching = false;
+            isPrivacyPolicyManualScrolling = false;
+            horizontalTableGesture = false;
+            stopMomentum();
+        }, { passive: true });
+    }
+
+    installPrivacyPolicyTouchScroller();
+    window.addEventListener('load', installPrivacyPolicyTouchScroller);
+
+    let privacyPolicyLastTouchEnd = 0;
+    document.addEventListener('touchend', function(event) {
+        const now = Date.now();
+        if (isPrivacyPolicyManualScrolling) {
+            isPrivacyPolicyManualScrolling = false;
+            privacyPolicyLastTouchEnd = now;
+            return;
+        }
+        if (now - privacyPolicyLastTouchEnd <= 300) event.preventDefault();
+        privacyPolicyLastTouchEnd = now;
+    }, { passive: false });
+
+    ['gesturestart', 'gesturechange', 'gestureend', 'contextmenu', 'selectstart', 'dragstart'].forEach(function(eventName) {
+        document.addEventListener(eventName, function(event) {
+            event.preventDefault();
+        }, { passive: false, capture: true });
+    });
+
+    function preventPrivacyPolicyMultiTouch(event) {
+        if (event.touches && event.touches.length > 1) event.preventDefault();
+    }
+
+    document.addEventListener('touchstart', preventPrivacyPolicyMultiTouch, { passive: false, capture: true });
+    document.addEventListener('touchmove', preventPrivacyPolicyMultiTouch, { passive: false, capture: true });
+
+    document.addEventListener('dblclick', function(event) {
+        event.preventDefault();
+    }, { passive: false });
+</script>
 </body>
 </html>
