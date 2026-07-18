@@ -2,248 +2,423 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="《天竺鼠冒險樂園》官方支援頁面：聯絡方式、常見問題與隱私權政策。" />
-  <title>天竺鼠冒險樂園｜支援中心</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="《天竺鼠冒險樂園》官方支援說明：存檔、購買、廣告、關卡更新與客服聯絡方式。" />
+  <title>天竺鼠冒險樂園｜支援說明</title>
   <style>
     :root {
-      --bg: #fffaf2;
-      --card: rgba(255,255,255,.92);
+      --bg: #f7f2e5;
+      --surface: #fffdf7;
+      --surface-green: #eef6e5;
+      --surface-blue: #edf6f8;
       --text: #4b3b2f;
-      --muted: #7a6a5c;
-      --accent: #e8892f;
-      --accent-dark: #b85f18;
-      --line: #efdcc7;
-      --soft: #fff1df;
-      --shadow: 0 12px 34px rgba(110, 72, 35, .10);
+      --muted: #77665a;
+      --accent: #e77b1b;
+      --green: #6d8b3d;
+      --teal: #4f9189;
+      --line: #dfd1b9;
+      --shadow: 0 9px 24px rgba(92, 66, 38, 0.10);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-    html {
-      background: var(--bg);
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
       color-scheme: light;
+      overscroll-behavior: none;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
-      margin: 0;
-      min-height: 100vh;
+      min-height: 0;
       font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC",
                    "Microsoft JhengHei", Arial, sans-serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at 10% 0%, rgba(255, 214, 153, .28), transparent 34rem),
-        radial-gradient(circle at 90% 12%, rgba(255, 236, 176, .34), transparent 30rem),
-        var(--bg);
-      line-height: 1.75;
+      background: var(--bg);
+      line-height: 1.72;
+      touch-action: none;
+    }
+
+    button,
+    a { touch-action: manipulation; }
+
+    .support-scroll {
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      min-height: 0;
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      touch-action: pan-y;
+      scrollbar-width: thin;
+      scrollbar-color: #8da65b #eee4cf;
+    }
+
+    .support-scroll::-webkit-scrollbar { width: 8px; }
+    .support-scroll::-webkit-scrollbar-track {
+      margin: 8px 0;
+      border-radius: 999px;
+      background: #eee4cf;
+    }
+    .support-scroll::-webkit-scrollbar-thumb {
+      border: 2px solid #eee4cf;
+      border-radius: 999px;
+      background: #8da65b;
     }
 
     .wrap {
-      width: min(920px, calc(100% - 32px));
+      width: min(880px, calc(100% - 28px));
       margin: 0 auto;
       padding:
-        max(32px, env(safe-area-inset-top))
+        max(24px, env(safe-area-inset-top))
         0
-        max(36px, env(safe-area-inset-bottom));
+        max(30px, env(safe-area-inset-bottom));
     }
 
     .hero {
-      text-align: center;
-      padding: 38px 22px 28px;
+      display: grid;
+      grid-template-columns: 78px minmax(0, 1fr);
+      align-items: center;
+      gap: 18px;
+      padding: 22px 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
     }
 
-    .icon {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 18px;
-      border-radius: 26px;
-      display: grid;
-      place-items: center;
-      font-size: 50px;
-      background: linear-gradient(145deg, #fff8e8, #ffe6bd);
-      border: 1px solid #f1d2a7;
-      box-shadow: var(--shadow);
+    .hero img {
+      width: 78px;
+      height: 78px;
+      object-fit: contain;
+      pointer-events: none;
+      -webkit-user-drag: none;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(30px, 5vw, 46px);
-      letter-spacing: .04em;
-      color: #3f2d20;
+      color: #b73b37;
+      font-size: clamp(28px, 5vw, 42px);
+      letter-spacing: 0;
     }
 
     .subtitle {
-      margin: 12px auto 0;
-      max-width: 680px;
+      margin: 5px 0 0;
       color: var(--muted);
-      font-size: 17px;
+      font-size: 15px;
     }
 
-    .card {
-      background: var(--card);
+    .section {
+      margin-top: 16px;
+      padding: 22px;
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 18px;
+      background: var(--surface);
       box-shadow: var(--shadow);
-      padding: 26px;
-      margin-bottom: 20px;
-      backdrop-filter: blur(8px);
     }
+
+    .section.progress { background: var(--surface-blue); border-color: #c8dfe1; }
+    .section.purchase { background: var(--surface-green); border-color: #d0dfb6; }
 
     h2 {
       margin: 0 0 12px;
-      font-size: 23px;
-      color: #4a3221;
+      color: #593f2b;
+      font-size: 22px;
+      letter-spacing: 0;
     }
 
     h3 {
-      margin: 22px 0 8px;
-      font-size: 18px;
-      color: #5a3d26;
+      margin: 18px 0 6px;
+      color: #654830;
+      font-size: 17px;
+      letter-spacing: 0;
     }
 
-    p { margin: 8px 0; }
+    p { margin: 7px 0; }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 1.3em;
+    }
+
+    li { margin: 6px 0; }
+
+    .world-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 13px;
+    }
+
+    .world-list span {
+      min-width: 0;
+      padding: 9px 7px;
+      border: 1px solid #e4d8c4;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.7);
+      color: #664b37;
+      font-weight: 800;
+      text-align: center;
+      overflow-wrap: anywhere;
+    }
+
+    .notice {
+      margin-top: 13px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--accent);
+      border-radius: 9px;
+      background: rgba(255,255,255,0.72);
+      color: #624b3c;
+    }
 
     .contact-box {
-      margin-top: 16px;
-      padding: 18px;
-      border-radius: 16px;
-      background: var(--soft);
-      border: 1px solid #f3d3ad;
+      margin-top: 13px;
+      padding: 15px;
+      border: 1px solid #efc892;
+      border-radius: 13px;
+      background: #fff3df;
     }
 
-    .email-link,
-    .button-link {
-      color: var(--accent-dark);
-      font-weight: 700;
+    .email-link {
+      color: #a85318;
+      font-weight: 900;
       text-decoration: none;
-      word-break: break-all;
-    }
-
-    .email-link:hover,
-    .button-link:hover {
-      text-decoration: underline;
-    }
-
-    .button-link {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      border-radius: 12px;
-      background: #fff;
-      border: 1px solid #efc58f;
-      text-decoration: none;
-    }
-
-    .faq {
-      border-top: 1px solid var(--line);
-      padding-top: 16px;
-      margin-top: 16px;
-    }
-
-    .faq:first-of-type {
-      border-top: 0;
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    .label {
-      display: inline-block;
-      margin-bottom: 8px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: #fff0dc;
-      color: #9a5319;
-      font-size: 13px;
-      font-weight: 700;
+      overflow-wrap: anywhere;
     }
 
     footer {
+      padding: 18px 8px 2px;
+      color: #88766a;
+      font-size: 13px;
       text-align: center;
-      color: #8b7a6b;
-      font-size: 14px;
-      padding: 14px 8px 0;
     }
 
     @media (max-width: 600px) {
-      .wrap { width: min(100% - 20px, 920px); }
-      .hero { padding: 28px 12px 22px; }
-      .card { padding: 20px; border-radius: 18px; }
-      .icon { width: 82px; height: 82px; font-size: 44px; }
+      .wrap { width: min(100% - 18px, 880px); }
+      .hero {
+        grid-template-columns: 62px minmax(0, 1fr);
+        gap: 12px;
+        padding: 17px 15px;
+        border-radius: 16px;
+      }
+      .hero img { width: 62px; height: 62px; }
+      .subtitle { font-size: 13px; }
+      .section { padding: 17px 15px; border-radius: 15px; }
+      .world-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 360px) {
+      .world-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <div class="icon" aria-hidden="true">🐹</div>
-      <h1>天竺鼠冒險樂園</h1>
-      <p class="subtitle">
-        歡迎來到官方支援中心。若你在遊戲中遇到問題、想提供建議，
-        或需要協助，請透過下方方式與我們聯絡。
-      </p>
-    </section>
+  <main class="support-scroll" id="support-scroll">
+    <div class="wrap">
+      <header class="hero">
+        <img src="pupu/01.png" alt="湯圓" />
+        <div>
+          <h1>支援說明</h1>
+          <p class="subtitle">天竺鼠冒險樂園的存檔、購買、廣告與常見問題。</p>
+        </div>
+      </header>
 
-    <section class="card">
-      <span class="label">聯絡我們</span>
-      <h2>玩家支援</h2>
-      <p>
-        請在來信中簡單說明你遇到的問題，若方便，也可以附上裝置型號、
-        iOS 版本與問題畫面，讓我們更容易了解狀況。
-      </p>
+      <section class="section">
+        <h2>目前遊戲內容</h2>
+        <p>大廳目前連接六個冒險世界，各世界的關卡進度與星級會分別保存：</p>
+        <div class="world-list" aria-label="六個冒險世界">
+          <span>推箱子</span>
+          <span>豚獨樂</span>
+          <span>萌鼠隊</span>
+          <span>碰碰豬</span>
+          <span>萌寵連</span>
+          <span>鼠之國</span>
+        </div>
+        <p class="notice">關卡與功能更新會隨 App 新版本提供。若遇到內容不一致，請先確認 App 已更新到最新版本。</p>
+      </section>
 
-      <div class="contact-box">
-        <strong>支援信箱</strong><br />
-        <a class="email-link" href="mailto:morumotto9966@gmail.com?subject=%E5%A4%A9%E7%AB%BA%E9%BC%A0%E5%86%92%E9%9A%AA%E6%A8%82%E5%9C%92%E6%94%AF%E6%8F%B4">
-          morumotto9966@gmail.com
-        </a>
-      </div>
-    </section>
+      <section class="section progress">
+        <h2>進度與冒險者存檔</h2>
+        <ul>
+          <li>同一台裝置可以建立多個冒險者，每個冒險者的金幣、關卡、天竺鼠與道具資料各自獨立。</li>
+          <li>遊戲進度主要保存在目前裝置。刪除 App 或清除 App 資料會一併刪除本機存檔。</li>
+          <li>「恢復購買」只會恢復永久去廣告資格，不會恢復關卡、金幣或天竺鼠資料。</li>
+          <li>若設定頁提供「匯出進度／匯入進度」，建議更換裝置或刪除 App 前先完成匯出備份。</li>
+        </ul>
+      </section>
 
-    <section class="card">
-      <span class="label">常見問題</span>
-      <h2>FAQ</h2>
+      <section class="section purchase">
+        <h2>購買與廣告</h2>
+        <h3>永久去廣告</h3>
+        <p>目前唯一的台幣商品為「永久去廣告」。購買由 Apple App Store 處理，並透過 RevenueCat 驗證購買資格。</p>
+        <p>換機後請先登入原本購買時使用的 Apple ID；若資格沒有立即出現，可到系統設定中心點選「恢復購買」。</p>
 
-      <div class="faq">
-        <h3>遊戲無法正常開啟或畫面異常怎麼辦？</h3>
-        <p>
-          請先完全關閉 App 後重新開啟。若問題仍然存在，請重新啟動裝置，
-          並確認已安裝最新版本的 App。
-        </p>
-      </div>
+        <h3>獎勵廣告</h3>
+        <p>遊戲中的獎勵廣告可能用於過關金幣加倍、小遊戲再玩一次，以及幸運轉盤額外次數。只有完整取得廣告獎勵後，遊戲才會發放對應內容。</p>
 
-      <div class="faq">
-        <h3>遊戲進度會儲存在哪裡？</h3>
-        <p>
-          目前遊戲資料主要儲存在裝置本機。移除 App、清除資料或更換裝置前，
-          請留意部分本機資料可能無法保留。
-        </p>
-      </div>
+        <h3>廣告隱私選項</h3>
+        <p>需要調整 Google 廣告同意或隱私偏好時，請從大廳右上角側邊選單進入「宣告」，再點選「廣告隱私選項」。部分地區依法不需要顯示管理表單，這屬於正常情況。</p>
+      </section>
 
-      <div class="faq">
-        <h3>我可以提供新功能或小遊戲建議嗎？</h3>
-        <p>
-          可以。歡迎透過支援信箱告訴我們你希望加入的玩法、功能或改善建議。
-        </p>
-      </div>
-    </section>
+      <section class="section">
+        <h2>常見問題</h2>
+        <h3>畫面異常、按鈕無法點擊或聲音不正常</h3>
+        <p>請先完全關閉 App 後重新開啟；若仍未恢復，請重新啟動裝置並確認 App 已更新到最新版本。</p>
 
-    <section class="card">
-      <span class="label">相關資訊</span>
-      <h2>隱私權政策</h2>
-      <p>你可以在下方查看《天竺鼠冒險樂園》的隱私權政策。</p>
-      <a
-        class="button-link"
-        href="https://morumotto9966-coder.github.io/privacy/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        查看隱私權政策
-      </a>
-    </section>
+        <h3>購買成功但仍然看到廣告</h3>
+        <p>請確認目前裝置登入的是原本購買使用的 Apple ID，再到系統設定中心點選「恢復購買」。若仍無法恢復，請聯絡客服並附上 Apple 訂單或購買畫面。</p>
 
-    <footer>
-      © 2026 WU GUEI-RONG. All rights reserved.
-    </footer>
+        <h3>更換裝置後看不到舊進度</h3>
+        <p>永久去廣告與遊戲進度是兩套不同資料。永久去廣告可以透過 Apple ID 恢復，但本機遊戲進度需要事先匯出，再於新裝置匯入。</p>
+      </section>
+
+      <section class="section">
+        <h2>聯絡玩家支援</h2>
+        <p>來信時請盡量附上冒險者名稱、裝置型號、iOS 版本、App 版本、問題發生步驟，以及畫面截圖或錄影。購買問題可再附上 Apple 訂單資訊。</p>
+        <div class="contact-box">
+          <strong>客服信箱</strong><br />
+          <a class="email-link" href="mailto:morumotto9966@gmail.com?subject=%E5%A4%A9%E7%AB%BA%E9%BC%A0%E5%86%92%E9%9A%AA%E6%A8%82%E5%9C%92%E6%94%AF%E6%8F%B4">
+            morumotto9966@gmail.com
+          </a>
+        </div>
+      </section>
+
+      <footer>© 2026 WU GUEI-RONG. All rights reserved.</footer>
+    </div>
   </main>
+
+  <script>
+    let supportManualScrolling = false;
+
+    function installSupportTouchScroller() {
+      const scroller = document.getElementById('support-scroll');
+      if (!scroller || scroller.dataset.touchScroller === '1') return;
+      scroller.dataset.touchScroller = '1';
+
+      let startY = 0;
+      let startScrollTop = 0;
+      let lastY = 0;
+      let lastTime = 0;
+      let velocity = 0;
+      let rafId = null;
+      let isTouching = false;
+
+      function stopMomentum() {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+
+      scroller.addEventListener('touchstart', function(event) {
+        if (!event.touches || event.touches.length !== 1) return;
+        const touch = event.touches[0];
+        isTouching = true;
+        supportManualScrolling = false;
+        stopMomentum();
+        startY = touch.clientY;
+        startScrollTop = scroller.scrollTop;
+        lastY = startY;
+        lastTime = Date.now();
+        velocity = 0;
+      }, { passive: true });
+
+      scroller.addEventListener('touchmove', function(event) {
+        if (!event.touches || event.touches.length !== 1) return;
+        const touch = event.touches[0];
+        const deltaY = touch.clientY - startY;
+        const maxScrollTop = Math.max(0, scroller.scrollHeight - scroller.clientHeight);
+        scroller.scrollTop = Math.max(0, Math.min(maxScrollTop, startScrollTop - deltaY));
+
+        const now = Date.now();
+        const elapsed = now - lastTime;
+        const frameDeltaY = touch.clientY - lastY;
+        if (Math.abs(deltaY) > 3) supportManualScrolling = true;
+        if (elapsed > 0) velocity = velocity * 0.4 + (frameDeltaY / elapsed) * 0.6;
+        lastY = touch.clientY;
+        lastTime = now;
+        event.preventDefault();
+        event.stopPropagation();
+      }, { passive: false });
+
+      scroller.addEventListener('touchend', function() {
+        isTouching = false;
+        if (Math.abs(velocity) <= 0.15) {
+          setTimeout(function() { supportManualScrolling = false; }, 80);
+          return;
+        }
+
+        let lastTickTime = Date.now();
+        const step = function() {
+          if (isTouching) return;
+          const now = Date.now();
+          const elapsed = now - lastTickTime;
+          lastTickTime = now;
+          velocity *= Math.pow(0.96, elapsed / 16.6);
+          if (Math.abs(velocity) < 0.05) {
+            supportManualScrolling = false;
+            return;
+          }
+          const previousScrollTop = scroller.scrollTop;
+          scroller.scrollTop -= velocity * elapsed;
+          if (scroller.scrollTop === previousScrollTop) {
+            supportManualScrolling = false;
+            return;
+          }
+          rafId = requestAnimationFrame(step);
+        };
+        rafId = requestAnimationFrame(step);
+      }, { passive: true });
+
+      scroller.addEventListener('touchcancel', function() {
+        isTouching = false;
+        supportManualScrolling = false;
+        stopMomentum();
+      }, { passive: true });
+    }
+
+    installSupportTouchScroller();
+    window.addEventListener('load', installSupportTouchScroller);
+
+    let supportLastTouchEnd = 0;
+    document.addEventListener('touchend', function(event) {
+      const now = Date.now();
+      if (supportManualScrolling) {
+        supportManualScrolling = false;
+        supportLastTouchEnd = now;
+        return;
+      }
+      if (now - supportLastTouchEnd <= 300) event.preventDefault();
+      supportLastTouchEnd = now;
+    }, { passive: false });
+
+    ['gesturestart', 'gesturechange', 'gestureend', 'contextmenu', 'selectstart', 'dragstart'].forEach(function(eventName) {
+      document.addEventListener(eventName, function(event) {
+        event.preventDefault();
+      }, { passive: false, capture: true });
+    });
+
+    function preventSupportMultiTouch(event) {
+      if (event.touches && event.touches.length > 1) event.preventDefault();
+    }
+
+    document.addEventListener('touchstart', preventSupportMultiTouch, { passive: false, capture: true });
+    document.addEventListener('touchmove', preventSupportMultiTouch, { passive: false, capture: true });
+
+    document.addEventListener('dblclick', function(event) {
+      event.preventDefault();
+    }, { passive: false });
+  </script>
 </body>
 </html>
