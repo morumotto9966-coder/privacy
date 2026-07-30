@@ -403,6 +403,78 @@
             }
         }
 
+        @media (max-width: 560px) {
+            .table-wrap {
+                overflow: hidden;
+                border: 0;
+                background: transparent;
+            }
+
+            table,
+            tbody,
+            tr,
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            table {
+                min-width: 0;
+                font-size: 14px;
+            }
+
+            thead {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                clip-path: inset(50%);
+                white-space: nowrap;
+                border: 0;
+            }
+
+            tbody {
+                display: grid;
+                gap: 10px;
+            }
+
+            tbody tr {
+                overflow: hidden;
+                border: 1px solid var(--line);
+                border-radius: 10px;
+                background: #fff;
+                box-shadow: 0 3px 10px rgba(62, 51, 40, 0.05);
+            }
+
+            tbody tr td {
+                display: grid;
+                grid-template-columns: 88px minmax(0, 1fr);
+                gap: 10px;
+                padding: 9px 11px;
+                border-bottom: 1px solid #e6e0d4;
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+
+            tbody tr td:last-child {
+                border-bottom: 0;
+            }
+
+            tbody td::before {
+                content: attr(data-label);
+                color: #314837;
+                font-weight: 800;
+            }
+
+            tbody td a {
+                overflow-wrap: anywhere;
+                word-break: break-word;
+            }
+        }
+
         @media (max-width: 440px) {
             .header-inner {
                 grid-template-columns: 66px minmax(0, 1fr);
@@ -445,6 +517,13 @@
             p,
             li {
                 font-size: 14px;
+            }
+
+            tbody tr td {
+                grid-template-columns: 78px minmax(0, 1fr);
+                gap: 8px;
+                padding: 8px 9px;
+                font-size: 13px;
             }
         }
 
@@ -494,7 +573,7 @@
                 <p class="header-summary">本政策說明本遊戲如何處理玩家資料、裝置資訊、廣告及應用程式內購買資料。</p>
                 <div class="date-row" aria-label="政策日期">
                     <span>生效日期：2026 年 7 月 13 日</span>
-                    <span>最後更新：2026 年 7 月 29 日</span>
+                    <span>最後更新：2026 年 7 月 30 日</span>
                 </div>
             </div>
         </div>
@@ -603,22 +682,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Google AdMob</td>
-                                <td>獎勵廣告、廣告衡量與防詐欺</td>
-                                <td>IP、一般位置、識別碼、廣告及應用程式互動、效能與診斷資料</td>
-                                <td><a href="https://policies.google.com/privacy?hl=zh-TW" target="_blank" rel="noopener noreferrer">Google 隱私權政策</a></td>
+                                <td data-label="服務">Google AdMob</td>
+                                <td data-label="用途">獎勵廣告、廣告衡量與防詐欺</td>
+                                <td data-label="可能處理的資料">IP、一般位置、識別碼、廣告及應用程式互動、效能與診斷資料</td>
+                                <td data-label="政策"><a href="https://policies.google.com/privacy?hl=zh-TW" target="_blank" rel="noopener noreferrer">Google 隱私權政策</a></td>
                             </tr>
                             <tr>
-                                <td>Apple App Store / StoreKit</td>
-                                <td>公開版本查詢、付款、交易管理與恢復購買</td>
-                                <td>App 識別碼與公開版本資料；購買時另包含 Apple 帳戶交易紀錄、商品及收據資料</td>
-                                <td><a href="https://www.apple.com/legal/privacy/zh-tw/" target="_blank" rel="noopener noreferrer">Apple 隱私權政策</a></td>
+                                <td data-label="服務">Apple App Store / StoreKit</td>
+                                <td data-label="用途">公開版本查詢、付款、交易管理與恢復購買</td>
+                                <td data-label="可能處理的資料">App 識別碼與公開版本資料；購買時另包含 Apple 帳戶交易紀錄、商品及收據資料</td>
+                                <td data-label="政策"><a href="https://www.apple.com/legal/privacy/zh-tw/" target="_blank" rel="noopener noreferrer">Apple 隱私權政策</a></td>
                             </tr>
                             <tr>
-                                <td>RevenueCat</td>
-                                <td>驗證購買與管理商品權益</td>
-                                <td>匿名 App User ID、交易收據、購買歷史、權益及技術資料</td>
-                                <td><a href="https://www.revenuecat.com/privacy-policy/" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></td>
+                                <td data-label="服務">RevenueCat</td>
+                                <td data-label="用途">驗證購買與管理商品權益</td>
+                                <td data-label="可能處理的資料">匿名 App User ID、交易收據、購買歷史、權益及技術資料</td>
+                                <td data-label="政策"><a href="https://www.revenuecat.com/privacy-policy/" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -631,13 +710,14 @@
             <section id="ads">
                 <h2>5. 廣告、同意與跨 App 追蹤</h2>
                 <p>本遊戲的廣告以玩家主動選擇觀看的獎勵廣告為主。是否同意個人化廣告不會阻止玩家使用本遊戲的核心內容，但可能影響廣告個人化、衡量方式或可供應的廣告類型。</p>
-                <p>目前發布版本不存取 IDFA，也不使用玩家或裝置資料進行 Apple 所定義的跨 App／網站追蹤，因此不會主動顯示 App Tracking Transparency（ATT）追蹤授權視窗。即使不使用 IDFA，Google AdMob 仍可能依其政策處理 IP、概略位置、廣告互動、效能與診斷等資料；相關內容已列於上方第三方服務資料表。</p>
+                <p>在 iOS 上，本遊戲會在 Google UMP 同意表單、Google Mobile Ads 初始化及任何可能用於跨 App／網站追蹤的廣告資料處理之前，透過 Apple App Tracking Transparency（ATT）系統視窗詢問玩家是否允許追蹤。只有玩家在 ATT 明確允許時，Google Mobile Ads 才可能取得 IDFA 並依玩家的廣告同意選擇用於個人化廣告、廣告衡量或 Apple 所定義的跨 App／網站追蹤。</p>
+                <p>若玩家拒絕 ATT、裝置限制追蹤或尚未允許，iOS 不會向本遊戲提供 IDFA，本遊戲不會以 IDFA 進行跨 App／網站追蹤；玩家仍可正常使用所有核心遊戲功能。Google AdMob 仍可能依 UMP 選擇及其政策處理 IP、概略位置、廣告互動、效能、診斷或防詐欺所需資料，相關內容已列於上方第三方服務資料表。</p>
                 <ul>
                     <li>本遊戲使用 Google User Messaging Platform（UMP）管理適用地區的廣告隱私同意。</li>
-                    <li>App 每次啟動時會更新 UMP 同意資訊；若 Google 回報需要同意表單，會先顯示表單，並只在 UMP 回報可請求廣告後載入或請求廣告。</li>
-                    <li>原生廣告設定已停用 Google 發佈商第一方識別碼，並且不會要求存取 IDFA。</li>
+                    <li>App 會先完成 ATT 選擇，再更新 UMP 同意資訊；若 Google 回報需要同意表單，會顯示表單，並只在 UMP 回報可請求廣告後初始化或請求廣告。</li>
+                    <li>原生廣告設定已停用 Google 發佈商第一方識別碼；ATT 未授權時不會取得 IDFA。</li>
                     <li>玩家可透過遊戲設定中的「廣告隱私選項」重新管理目前可用的廣告選擇。</li>
-                    <li>若未來版本決定啟用需要 ATT 許可的追蹤，開發者會先更新本政策、App Store Connect 隱私回答與 App 內說明，並在任何追蹤發生前取得玩家授權。</li>
+                    <li>玩家亦可在 iOS「設定／隱私權與安全性／追蹤」中查看或變更 ATT 權限；權限變更後以系統實際狀態為準。</li>
                 </ul>
             </section>
 
