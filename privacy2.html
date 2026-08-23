@@ -559,15 +559,14 @@
 
     <header class="site-header">
         <div class="header-inner">
-            <!-- 上傳至 /privacy/android/ 時，沿用 /privacy/pupu/pupu01.png。 -->
-            <img class="brand-image" src="../pupu/pupu01.png" alt="天竺鼠湯圓" width="112" height="82">
+            <img class="brand-image" src="pupu/pupu01.png" alt="天竺鼠湯圓" width="112" height="82">
             <div>
                 <p class="eyebrow">天竺鼠冒險樂園</p>
                 <h1>隱私權政策 <span class="platform-label">Android 版</span></h1>
                 <p class="header-summary">本政策說明本遊戲如何處理玩家資料、裝置資訊、獎勵廣告及應用程式內購買資料。</p>
                 <div class="date-row" aria-label="政策日期">
                     <span>生效日期：2026 年 8 月 8 日</span>
-                    <span>最後更新：2026 年 8 月 8 日</span>
+                    <span>最後更新：2026 年 8 月 23 日</span>
                 </div>
             </div>
         </div>
@@ -594,13 +593,13 @@
 
         <main id="main-content">
             <div class="notice">
-                <strong>重要摘要：</strong>本遊戲不要求建立線上會員帳號。冒險者名稱與主要遊戲進度原則上保存在玩家裝置中；網路功能可能透過 Google AdMob、Google Play 與 RevenueCat 處理提供廣告或購買功能所必要的資料。
+                <strong>重要摘要：</strong>本遊戲首次啟動會建立匿名 Firebase 遊戲身分，不強迫玩家登入。免費金幣與主要進度仍以裝置內存檔為主；玩家綁定 Google 帳號後，才可購買付費金幣及手動使用換機備份。網路功能可能透過 Firebase、Google AdMob、Google Play 與 RevenueCat 處理必要資料。
             </div>
 
             <div class="summary-grid" aria-label="隱私摘要">
                 <div class="summary-item">
-                    <b>本機遊戲存檔</b>
-                    <span>玩家名稱、進度與道具主要留在裝置內。</span>
+                    <b>本機存檔與手動備份</b>
+                    <span>主要進度留在裝置內；綁定後可自行手動備份。</span>
                 </div>
                 <div class="summary-item">
                     <b>不取得付款卡號</b>
@@ -616,7 +615,7 @@
                 <h2>1. 適用範圍與資料控制者</h2>
                 <p>本隱私權政策適用於「天竺鼠冒險樂園」（以下稱「本遊戲」）的 Android 應用程式、遊戲內功能，以及與本遊戲直接相關的支援服務。Android 套件名稱為 <code>com.pupuguineapig.wewe</code>。</p>
                 <p>本遊戲的資料控制者為 Google Play 產品頁所顯示之開發者。若您對本政策或資料處理方式有疑問，可透過本頁底部的聯絡信箱與開發者聯繫。</p>
-                <p>本遊戲中的「冒險者檔案」是保存在裝置內的遊戲存檔，不是線上會員帳號。本遊戲不要求玩家提供真實姓名、電話、住址或身分證件。</p>
+                <p>本遊戲中的「冒險者檔案」以裝置內遊戲存檔為主。首次啟動會由 Firebase Authentication 建立匿名 UID，不要求玩家先登入；購買付費金幣或使用換機功能前，玩家需選擇綁定 Google 帳號。玩家選擇 Google 帳號登入時，Google Identity Services 與 Firebase Authentication 可能向本遊戲提供 Google 帳號專屬使用者識別碼、電子信箱、顯示名稱與個人資料圖片網址；本遊戲不要求玩家另行填寫真實姓名、電話、住址或身分證件，也不會取得 Google 帳號或 Gmail 密碼。</p>
             </section>
 
             <section id="data">
@@ -630,23 +629,29 @@
                     <li>關卡進度、星等、遊玩次數、小遊戲紀錄、任務狀態與新手引導進度。</li>
                     <li>背景音樂、遊戲音效及其他偏好設定。</li>
                 </ul>
-                <p>本遊戲不會將上述完整本機存檔主動同步到開發者自有的玩家進度資料庫。</p>
+                <p>本遊戲不會自動上傳完整存檔。已綁定帳號的玩家可在設定頁主動上傳一份經白名單篩選的換機存檔；上傳間隔至少60分鐘，每日最多6次。身分憑證、付款待處理紀錄、交易權杖、廣告同意、快取與除錯資料不會包含在換機存檔內。</p>
 
                 <h3>2.2 內建關卡與本機資料</h3>
-                <p>遊戲關卡及主要內容均隨 App 版本內建，不會透過雲端服務下載、同步或更新。新增或調整關卡時，將透過 Google Play 發布新版 App。本遊戲亦不會將完整本機存檔上傳至開發者自有的玩家進度資料庫。</p>
+                <p>遊戲關卡及主要內容均隨 App 版本內建，不會透過雲端服務更新關卡。新增或調整關卡時，將透過 Google Play 發布新版 App。玩家主動使用的換機備份僅用於保存及還原遊戲進度。</p>
 
                 <h3>2.3 廣告相關資料</h3>
                 <p>本遊戲使用 Google AdMob 顯示由玩家主動選擇觀看的獎勵廣告，包括關卡結算金幣加倍、小遊戲增加一次遊玩機會，以及幸運轉盤增加一次轉動機會。Google Mobile Ads SDK 依實際設定、所在區域及適用規範，可能處理 IP 位址、由 IP 推估的概略位置、裝置或其他識別碼、廣告曝光與互動紀錄、應用程式互動、效能及診斷資料。</p>
 
                 <h3>2.4 購買及權益資料</h3>
-                <p>若玩家購買目前唯一的真實貨幣商品「永久去廣告」，Google Play 負責處理付款。本遊戲及 RevenueCat 可能處理商品識別碼、購買狀態、交易權杖、購買紀錄、權益狀態、匿名 App User ID，以及驗證交易所需的技術資訊。</p>
-                <p>本遊戲不會取得或保存玩家的完整信用卡號、銀行帳戶、Google 帳號密碼或 Gmail 密碼，也不會將玩家名稱或信箱綁定至 RevenueCat。</p>
+                <p>本遊戲提供「永久去廣告」非消耗型商品，以及每次成功交易可取得 5000 枚遊戲金幣的消耗型商品。Google Play 負責處理付款；本遊戲及 RevenueCat 可能處理商品識別碼、購買狀態、交易權杖、購買紀錄、權益狀態、匿名或已綁定的 App User ID，以及驗證交易所需的技術資訊。</p>
+                <p>付費金幣與免費遊玩取得的金幣分開保存。每筆新的消耗型交易會先由 RevenueCat 與伺服器核對唯一交易識別碼，確認尚未發放後才把5000枚加入 Firebase 付費金幣錢包；免費金幣仍保存在裝置內。同一交易識別碼不會重複發放，該消耗型商品不建立永久權益，也不會由「恢復購買」重新發放。</p>
+                <p>本遊戲不會取得或保存玩家的完整信用卡號、銀行帳戶、Google 帳號密碼或 Gmail 密碼。付費金幣購買時，RevenueCat App User ID 會對應已綁定的 Firebase UID，以便交易安全入帳及換機使用。</p>
 
-                <h3>2.5 聯絡支援資料</h3>
+                <h3>2.5 Firebase 身分、付費錢包與換機存檔</h3>
+                <p>Firebase 可能處理匿名或已綁定 UID、登入提供者識別、Google 帳號專屬使用者識別碼、電子信箱、顯示名稱、個人資料圖片網址、登入及安全驗證所需的 IP 位址與技術資料、裝置內冒險者識別碼的雜湊或對應關係、帳號建立與更新時間、雲端備份摘要及內容、備份次數與時間、付費金幣餘額與累計發放／使用量，以及防止重複入帳或重複扣款所需的交易識別資料。登入憑證只用於身分驗證並交由 Firebase Authentication 處理，本遊戲不保存 Google 帳號或 Gmail 密碼。</p>
+                <p>為防止未授權 App 或遭竄改裝置濫用雲端服務，本遊戲使用 Firebase App Check 與 Google Play Integrity。這些服務可能處理 App／裝置完整性 token、App Check token、App 識別、安裝來源、授權狀態及驗證所需的技術資料；其用途僅限安全驗證、防詐欺及保護 Firebase 後端，不用於廣告個人化。</p>
+                <p>換機還原只限已綁定帳號。新裝置登入同一帳號後，系統會把雲端存檔安全映射到新裝置的本機冒險者識別碼；實際覆蓋前會先在裝置內保留一份復原資料。</p>
+
+                <h3>2.6 聯絡支援資料</h3>
                 <p>當玩家主動寄信聯絡時，開發者會收到寄件信箱、信件內容及玩家自行附上的資料，用於回覆問題、處理購買或技術支援。請勿在信件中提供與問題無關的敏感個人資料。</p>
 
-                <h3>2.6 本遊戲不主動要求的資料</h3>
-                <p>本遊戲不會為核心遊戲功能主動要求存取精確位置、聯絡人、相機、麥克風、健康資料或裝置內的個人照片。本遊戲不建立玩家會員帳號。</p>
+                <h3>2.7 本遊戲不主動要求的資料</h3>
+                <p>本遊戲不會為核心遊戲功能主動要求存取精確位置、聯絡人、相機、麥克風、健康資料或裝置內的個人照片。</p>
             </section>
 
             <section id="purpose">
@@ -654,9 +659,12 @@
                 <p>前述資料可能用於以下目的：</p>
                 <ul>
                     <li>保存及載入遊戲進度、設定與玩家選擇。</li>
+                    <li>建立匿名遊戲身分、綁定帳號，以及提供玩家主動操作的換機備份與還原。</li>
                     <li>維持遊戲功能、相容性與服務穩定性。</li>
                     <li>顯示、衡量及防止濫用獎勵廣告。</li>
-                    <li>完成交易、驗證購買、恢復購買及提供永久去廣告權益。</li>
+                    <li>完成交易、驗證購買、發放消耗型遊戲金幣、防止同一交易重複發放，以及恢復永久去廣告權益。</li>
+                    <li>同步付費金幣餘額，並以不可重複的扣款識別碼防止重複扣款。</li>
+                    <li>驗證 App／裝置完整性、阻擋未授權用戶端並保護雲端服務免受濫用。</li>
                     <li>分析服務表現、防止詐欺、維護安全及履行法規要求。</li>
                     <li>回覆玩家詢問與處理客戶支援。</li>
                 </ul>
@@ -679,6 +687,18 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td data-label="服務">Firebase Authentication／Cloud Firestore／Cloud Functions／App Check</td>
+                                <td data-label="用途">匿名身分、Google 帳號綁定、手動換機存檔、付費金幣錢包、交易防重及後端防濫用</td>
+                                <td data-label="可能處理的資料">UID、Google 提供的識別碼／信箱／顯示名稱／圖片網址、登入提供者識別、IP 與驗證技術資料、本機冒險者對應、手動上傳的遊戲存檔、備份摘要、付費錢包、必要交易識別、完整性 token 及 App Check token</td>
+                                <td data-label="政策"><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a></td>
+                            </tr>
+                            <tr>
+                                <td data-label="服務">Google Identity Services／Play Integrity</td>
+                                <td data-label="用途">Google 帳號登入、帳號綁定與 App／裝置完整性驗證</td>
+                                <td data-label="可能處理的資料">Google 帳號專屬識別碼、信箱、顯示名稱、個人資料圖片網址、登入憑證、完整性 token、App 識別、安裝來源、授權狀態及必要技術資料</td>
+                                <td data-label="政策"><a href="https://policies.google.com/privacy?hl=zh-TW" target="_blank" rel="noopener noreferrer">Google 隱私權政策</a></td>
+                            </tr>
+                            <tr>
                                 <td data-label="服務">Google AdMob</td>
                                 <td data-label="用途">獎勵廣告、廣告衡量與防詐欺</td>
                                 <td data-label="可能處理的資料">IP、概略位置、裝置或其他識別碼、廣告及應用程式互動、效能與診斷資料</td>
@@ -692,8 +712,8 @@
                             </tr>
                             <tr>
                                 <td data-label="服務">RevenueCat</td>
-                                <td data-label="用途">驗證購買與管理商品權益</td>
-                                <td data-label="可能處理的資料">匿名 App User ID、交易權杖、購買紀錄、權益及技術資料</td>
+                                <td data-label="用途">驗證購買、管理商品權益及將已綁定 UID 對應至付費交易</td>
+                                <td data-label="可能處理的資料">App User ID、交易權杖、購買紀錄、權益及技術資料</td>
                                 <td data-label="政策"><a href="https://www.revenuecat.com/privacy-policy/" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a></td>
                             </tr>
                         </tbody>
@@ -717,27 +737,30 @@
             </section>
 
             <section id="purchases">
-                <h2>6. 永久去廣告、購買驗證與恢復購買</h2>
+                <h2>6. 應用程式內購買、驗證與恢復購買</h2>
                 <p>本遊戲提供一項一次性非消耗型商品「永久去廣告」，Android 商品識別碼為 <code>com.pupuguineapig.wewe.removeads</code>。價格及幣別以玩家所在區域的 Google Play 購買畫面為準。</p>
-                <p>購買由 Google Play 處理，RevenueCat 以匿名 App User ID 驗證購買並管理永久去廣告權益。本遊戲不建立會員帳號，也不讀取或保存玩家的 Google 帳號信箱或密碼。</p>
+                <p>購買由 Google Play 處理。永久去廣告可沿用 RevenueCat 匿名 App User ID 驗證及管理權益；付費金幣則要求先綁定帳號，並以 Firebase UID 對應 RevenueCat 交易。本遊戲不讀取或保存玩家的 Google 帳號密碼。</p>
                 <p>玩家在其他 Android 裝置使用購買時相同的 Google Play 帳號後，可透過遊戲中的「恢復購買」功能重新驗證永久去廣告權益。能否恢復仍以 Google Play 的交易紀錄、商品狀態及 RevenueCat 驗證結果為準。</p>
+                <p>本遊戲另提供消耗型商品「5000 遊戲金幣」，商品識別碼為 <code>com.pupuguineapig.wewe.coins5000</code>。每筆新的成功購買經 RevenueCat 與 Firebase 伺服器驗證後，會在該綁定帳號的線上付費錢包增加5000枚，價格及幣別以 Google Play 購買畫面為準。此商品不綁定永久權益，不會因啟動、同步或恢復購買而再次發放；RevenueCat 依消耗型商品設定處理交易完成作業，遊戲不另外使用第二套付款或重複消耗流程。</p>
             </section>
 
             <section id="retention">
                 <h2>7. 資料保存與刪除方式</h2>
                 <ul>
-                    <li><strong>本機遊戲資料：</strong>保存於裝置中，直到玩家在遊戲設定使用「清除紀錄」、透過 Android 系統清除 App 資料，或刪除本遊戲。刪除後，本機進度通常無法恢復。</li>
+                    <li><strong>本機遊戲資料：</strong>免費金幣、主要進度與還原前的本機復原資料保存在裝置中，直到玩家在遊戲設定使用「清除紀錄」、透過 Android 系統清除 App 資料，或刪除本遊戲。尚未手動上傳的本機進度刪除後通常無法恢復。</li>
+                    <li><strong>Firebase 帳號及雲端資料：</strong>匿名身分會在首次啟動建立；手動備份保留最新與上一份存檔供玩家選擇還原。已綁定玩家可在設定使用「刪除帳號與資料」，永久刪除開發者控制的 Firebase 帳號資料、換機存檔及剩餘付費金幣。</li>
+                    <li><strong>交易防重資料：</strong>為防止同一交易再次發幣、處理退款、詐欺、安全或法定義務，刪除帳號後仍可能保留無法直接識別玩家的交易識別碼、雜湊刪除標記或必要稽核資料；商店及 RevenueCat 控制的紀錄另依其政策保存。</li>
                     <li><strong>客服信件：</strong>原則上保存至問題處理完成及必要的後續追蹤期間，最長不超過 24 個月；若法令、交易爭議或安全事件要求較長保存期間，依必要期間保存。</li>
                     <li><strong>廣告與購買資料：</strong>由 Google AdMob、Google Play 與 RevenueCat 依各自政策、帳戶設定、交易驗證、防詐欺及法律義務保存。刪除 App 不一定會刪除商店交易或第三方依法保存的紀錄。</li>
                 </ul>
-                <p>若玩家希望查詢或刪除開發者可控制的支援資料，或請求協助刪除與匿名購買識別碼相關的 RevenueCat 資料，可寄信至本政策所列聯絡信箱。為避免誤刪，開發者可能要求提供足以確認該請求與交易或裝置相關的非敏感資訊。</p>
+                <p>未綁定帳號時，玩家可在遊戲設定使用「清除本機紀錄」；帳號已綁定時，同一位置會明確顯示「刪除帳號與資料」，並在再次驗證後刪除開發者控制的 Firebase 帳號、雲端存檔、付費錢包與本機紀錄，且無法復原。玩家也可透過本政策所列聯絡信箱或開發者網站的「帳號與資料刪除」頁提出外部刪除請求；為避免誤刪，開發者可能要求提供足以確認請求的非敏感資訊。</p>
                 <p>Google Play 因付款、交易驗證、防詐欺或法律義務保存的交易紀錄，可能無法由開發者直接刪除；相關資料應透過 Google 提供的帳戶及隱私工具管理。</p>
             </section>
 
             <section id="children">
                 <h2>8. 兒童與未成年使用者</h2>
-                <p>本遊戲的目標對象包含兒童與成人。本遊戲不要求兒童建立線上會員帳號，也不會故意要求未滿 13 歲或當地法律所定最低年齡的兒童提供可直接識別個人身分的資料。</p>
-                <p>本遊戲的廣告請求均按兒童適用標準處理，並僅提供玩家主動選擇觀看的獎勵廣告。未成年玩家應在父母或法定監護人同意及陪同下使用本遊戲，並由成年人確認任何應用程式內購買。</p>
+                <p>本遊戲的目標對象包含兒童與成人。本遊戲不強迫兒童登入；首次啟動建立的是匿名遊戲身分。本遊戲不會故意要求未滿 13 歲或當地法律所定最低年齡的兒童提供可直接識別個人身分的資料。</p>
+                <p>本遊戲的廣告請求均按兒童適用標準處理，並僅提供玩家主動選擇觀看的獎勵廣告。未成年玩家應在父母或法定監護人同意及陪同下綁定 Google 帳號、使用換機功能或進行任何應用程式內購買。</p>
                 <p>若父母或監護人認為兒童在未經適當同意的情況下向開發者提供了個人資料，請來信聯絡；經合理確認後，開發者會依適用法律採取刪除或限制處理等措施。</p>
             </section>
 
@@ -745,7 +768,8 @@
                 <h2>9. 玩家選擇與資料權利</h2>
                 <p>依玩家所在司法管轄區，玩家可能享有查詢、存取、更正、刪除、限制處理、反對處理或撤回同意等權利。玩家可以：</p>
                 <ul>
-                    <li>使用遊戲設定中的「清除紀錄」刪除目前冒險者的本機存檔。</li>
+                    <li>未綁定帳號時使用「清除本機紀錄」刪除目前冒險者的本機存檔；帳號已綁定時使用「刪除帳號與資料」，刪除開發者控制的 Firebase 帳號、換機存檔、付費錢包與本機紀錄。</li>
+                    <li>選擇不綁定帳號並繼續離線遊玩；未綁定時不能購買付費金幣或使用換機備份與還原。</li>
                     <li>刪除 App 或透過 Android 系統設定清除本機資料。</li>
                     <li>透過遊戲設定中的「廣告隱私選項」管理適用的廣告選擇。</li>
                     <li>使用「恢復購買」重新驗證永久去廣告權益。</li>
@@ -756,8 +780,8 @@
 
             <section id="security">
                 <h2>10. 資料安全與跨境處理</h2>
-                <p>本遊戲及其第三方服務使用加密連線傳輸資料。開發者亦會採取與資料性質相稱的合理技術及管理措施，降低未經授權存取、遺失、誤用或竄改的風險，但任何裝置儲存與網路傳輸方式皆無法保證絕對安全。</p>
-                <p>Google AdMob、Google Play 或 RevenueCat 可能在玩家所在國家或地區以外的伺服器處理資料。相關跨境處理由各服務提供者依其政策及適用法律執行。</p>
+                <p>本遊戲使用加密連線存取 Firebase 與購買服務，並採用身分驗證、Firebase App Check、Google Play Integrity 完整性驗證、伺服器端交易核對、交易識別碼防重、備份白名單與大小限制等措施。任何裝置儲存與網路傳輸方式仍無法保證絕對安全。</p>
+                <p>Firebase、Google AdMob、Google Play 或 RevenueCat 可能在玩家所在國家或地區以外的伺服器處理資料。相關跨境處理由各服務提供者依其政策及適用法律執行。</p>
             </section>
 
             <section id="changes">
